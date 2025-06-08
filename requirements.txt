@@ -1,21 +1,14 @@
-
-# Core AI & agents
-crewai>=0.21.5
 cohere
 google-generativeai
 pysqlite3-binary
 requests
 beautifulsoup4
-
 streamlit
 streamlit_chat
-
 python-dotenv
 tqdm
-
 pydantic
 loguru
 nest_asyncio
-
 
 
