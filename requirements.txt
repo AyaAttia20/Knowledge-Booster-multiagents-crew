@@ -1,21 +1,20 @@
-pysqlite3
+
 # Core AI & agents
 crewai>=0.21.5
 cohere
 google-generativeai
-
+pysqlite3-binary
 requests
 beautifulsoup4
 
-# Streamlit frontend
 streamlit
 streamlit_chat
 
-# Util tools
 python-dotenv
 tqdm
 
-# Optional: For JSON, data handling, logs
 pydantic
 loguru
+
+
 
