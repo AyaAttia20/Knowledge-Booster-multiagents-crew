@@ -10,6 +10,7 @@ tqdm
 pydantic
 loguru
 nest_asyncio
-crewai
+crewai==0.16.5
+
 
 
