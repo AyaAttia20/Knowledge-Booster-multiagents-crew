@@ -10,7 +10,7 @@ tqdm
 pydantic
 loguru
 nest_asyncio
-crewai==0.16.5
+crewai==0.79.4
 crewai-tools==0.1.30
 
 
