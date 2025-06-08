@@ -20,7 +20,9 @@ import re
 import streamlit as st
 from datetime import datetime
 
-from crewai import Crew, Agent, Task, SerperDevTool 
+from crewai import Crew, Agent, Task
+from crewai_tools import SerperDevTool
+
 import google.generativeai as genai
 import cohere
 
