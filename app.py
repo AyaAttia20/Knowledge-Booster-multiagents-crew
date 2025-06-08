@@ -21,24 +21,24 @@ import streamlit as st
 from datetime import datetime
 
 from crewai import Crew, Agent, Task
-from crewai_tools import SerperDevTool
+from crewai_tools import SerperDevTool  
 
 import google.generativeai as genai
 import cohere
 
-# Load API keys from environment variables
+# تحميل مفاتيح API من البيئة
 os.environ["GEMINI_API_KEY"] = os.getenv("GEMINI_API_KEY")
 os.environ["COHERE_API_KEY"] = os.getenv("COHERE_API_KEY")
 os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")
 
-# Configure APIs
+# إعداد APIs
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 co = cohere.Client(os.environ["COHERE_API_KEY"])
 
-# Tools
+# أدوات البحث
 search_tool = SerperDevTool()
 
-# Agents
+# تعريف الـ Agents
 book_agent = Agent(
     role="Book Finder",
     goal="Find free books and PDFs for a topic.",
@@ -63,7 +63,7 @@ youtube_agent = Agent(
     allow_delegation=False
 )
 
-# Tasks
+# مهام Agents
 book_task = Task(
     description="Find 2 books or PDFs for the topic: {topic}. Include title and access link.",
     expected_output="List of book titles with links.",
@@ -82,7 +82,7 @@ youtube_task = Task(
     agent=youtube_agent
 )
 
-# Crew
+# تشكيل الـ Crew
 crew = Crew(
     agents=[book_agent, podcast_agent, youtube_agent],
     tasks=[book_task, podcast_task, youtube_task],
@@ -90,7 +90,7 @@ crew = Crew(
     memory=False
 )
 
-# --- Helpers ---
+# --- دوال مساعدة ---
 def parse_crew_results(result):
     outputs = {
         "books_results": "No books found.",
@@ -123,7 +123,7 @@ def convert_to_markdown_links(text):
                 md_links.append(f"- {line.strip()}")
     return "\n".join(md_links) if md_links else "No results found."
 
-# --- Streamlit UI ---
+# --- واجهة Streamlit ---
 st.set_page_config(page_title="Knowledge Booster", layout="centered")
 st.title("🌟 Knowledge Booster")
 st.markdown("Get **books**, **podcasts**, and **videos** on any topic using AI agents.")
@@ -147,7 +147,7 @@ if st.button("🔍 Search"):
             st.subheader("📺 YouTube Videos")
             st.markdown(convert_to_markdown_links(youtube_raw))
 
-            # Save markdown report
+            # حفظ تقرير ماركداون
             report_md = f"""# 📘 Knowledge Booster Report
 
 **Topic:** {topic}  
