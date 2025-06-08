@@ -1,3 +1,4 @@
+pysqlite3
 # Core AI & agents
 crewai>=0.21.5
 cohere
@@ -17,3 +18,4 @@ tqdm
 # Optional: For JSON, data handling, logs
 pydantic
 loguru
+
