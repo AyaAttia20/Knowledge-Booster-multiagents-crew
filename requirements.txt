@@ -10,5 +10,6 @@ tqdm
 pydantic
 loguru
 nest_asyncio
+crewai
 
 
