@@ -1,10 +1,21 @@
-crewai==0.28.8
-crewai_tools==0.1.4
-langchain_community==0.0.21
-chromadb>=0.4.22,<0.5.0
-cohere==5.13.0
-google-generativeai==0.3.2
-streamlit==1.30.0
-pysqlite3-binary==0.5.4
-nest_asyncio==1.5.6
-python-dotenv==1.0.0
+# Core AI & agents
+crewai>=0.21.5
+cohere
+google-generativeai
+
+# Web scraping / search
+serper-devtools
+requests
+beautifulsoup4
+
+# Streamlit frontend
+streamlit
+streamlit_chat
+
+# Util tools
+python-dotenv
+tqdm
+
+# Optional: For JSON, data handling, logs
+pydantic
+loguru
