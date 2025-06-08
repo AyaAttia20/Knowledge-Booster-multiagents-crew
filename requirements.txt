@@ -3,8 +3,6 @@ crewai>=0.21.5
 cohere
 google-generativeai
 
-# Web scraping / search
-serper-devtools
 requests
 beautifulsoup4
 
