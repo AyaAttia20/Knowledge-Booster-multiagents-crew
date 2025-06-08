@@ -11,7 +11,7 @@ pydantic
 loguru
 nest_asyncio
 crewai==0.79.4
-crewai-tools==0.1.30
+crewai-tools==0.0.40
 
 
 
